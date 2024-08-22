@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ウェーベルンの作品</title>
+</head>
+<body>
+    <h1>Webern, Anton</h1>
+    <img src="images/webern.jpg" alt="ウェーベルンの肖像写真">
+    <form id="opusForm">
+        <input type="number" id="opusNumber" min="1" max="31">
+        <input type="submit" value="送信する">
+    </form>
+    <div id="result"></div>
+</body>
+<script>
+
+    document
+      .getElementById('opusForm')
+      .addEventListener('submit', async function (e) {
+        e.preventDefault();
+    
+        const opusNumber = document.getElementById('opusNumber').value;
+    
+        try {
+          const response = await fetch(`opus/${opusNumber}`);
+          const data = await response.json();
+          document.getElementById('result').innerText = data.work || 'Work not found'
+        } catch (error) {
+            console.error('No works')
+        }
+    })
+    </script>
+</html>
