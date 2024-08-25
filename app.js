@@ -1,3 +1,7 @@
+// Copyright © 2024 Yamizo (aka. hthcrwzy)
+// This program is available under AGPL v3;
+// please look at the LICENSE file.
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
