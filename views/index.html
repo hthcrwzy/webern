@@ -12,15 +12,24 @@ please look at the LICENSE file.
     <title>ウェーベルンの作品</title>
 </head>
 <body>
-    <h1>Webern, Anton (1883-1945)</h1>
-    <h2>アントン・ヴェーベルンの番号付き作品を参照できます</h2>
-    <img src="images/webern.jpg" alt="ウェーベルンの肖像写真" width="150" height="200">
+    <header>
+        <h1>Webern, Anton (1883-1945)</h1>
+        <h2>アントン・ヴェーベルンの番号付き作品を参照できます</h2>
+        <img src="images/webern.jpg" alt="ウェーベルンの肖像写真" width="150" height="200">
+    </header>
     <form id="opusForm">
         <h3>作品番号を入力してください</h3>
         <input type="number" id="opusNumber" min="1" max="31">
         <input type="submit" value="作品を検索">
     </form>
     <div id="result"></div>
+    <footer>
+        <p>Copyright © 2024 Yamizo (aka. hthcrwzy).
+            <br>
+            This website is built by Express.
+            <br>
+            The <a href="https://github.com/hthcrwzy/webern">source code</a> of this program is available under the AGPL v3.
+    </footer>
 </body>
 <script>
 
